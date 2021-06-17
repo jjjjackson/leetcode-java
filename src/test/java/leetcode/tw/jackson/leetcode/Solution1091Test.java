@@ -53,6 +53,7 @@ public class Solution1091Test {
         );
     }
 
+    @Test
     public void testFailCases() {
         List<Tester<int[][], Integer>> testers = new ArrayList<>(
             Arrays.asList(
