@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 public class Solution0920Test {
 
     @Test
-    public void testPrintMessage() {
+    public void testSuccessCases() {
         List<Interval> tester = new ArrayList<>(
             Arrays.asList(
                 new Interval(0, 30),
