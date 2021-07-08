@@ -7,16 +7,16 @@ public class ListNode {
     public int val;
     public ListNode next;
 
-    ListNode(int x, ListNode node) {
+    public ListNode(int x, ListNode node) {
         val = x;
         next = node;
     }
 
-    ListNode(int x) {
+    public ListNode(int x) {
         this(x, null);
     }
 
-    ListNode() {
+    public ListNode() {
         this(0, null);
     }
 
