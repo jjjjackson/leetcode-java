@@ -129,3 +129,54 @@ public class Solution0200 {
 //         return result;
 //     }
 // }
+// class Solution_BFS {
+//     int[][] directions = {
+//         {1,0},
+//         {-1,0},
+//         {0,1},
+//         {0,-1},
+//     };
+//     private void exploreIsland(char[][] grid, boolean[][] visited, int[] point ){
+//         Queue<int[]> queue = new LinkedList<>();
+//         queue.offer(point);
+//         int size = 0;
+//         while(!queue.isEmpty()) {
+//             size = queue.size();
+//             while(size > 0) {
+//                 size--;
+//                 int[] cur = queue.poll();
+//                 if(cur[0] < 0 || cur[0] >= grid.length || cur[1] < 0 || cur[1] >= grid[0].length) {
+//                     continue;
+//                 }
+//                 if(grid[cur[0]][cur[1]] == '0' || visited[cur[0]][cur[1]] ) {
+//                     continue;
+//                 }
+//                 visited[cur[0]][cur[1]] = true;
+//                 for(int[] d: directions) {
+//                     queue.offer(new int[] {
+//                        cur[0] + d[0],
+//                        cur[1] + d[1],
+//                     });
+//                 }
+//             }
+//         }
+//         return;
+//     }
+//     public int numIslands(char[][] grid) {
+//         // bfs
+//         if (grid == null ||  grid.length == 0 || grid[0] == null || grid[0].length == 0 ) {
+//             return 0;
+//         }
+//         boolean[][] visited = new boolean[grid.length][grid[0].length];
+//         int result = 0;
+//         for(int i = 0 ; i < grid.length ; i++ ){
+//             for( int j = 0 ; j < grid[i].length ; j++ ){
+//                 if(grid[i][j] == '1' && !visited[i][j]) {
+//                     exploreIsland(grid, visited, new int[]{i,j});
+//                     result++;
+//                 }
+//             }
+//         }
+//         return result;
+//     }
+// }
